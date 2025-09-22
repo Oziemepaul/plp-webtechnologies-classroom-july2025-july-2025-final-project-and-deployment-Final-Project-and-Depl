@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+      <div class="header_nav">
+        <h2>LEARNEASY</h2>
+        <div class="nav-img">
+          <img class="close" src="./assets/icon-menu.svg" alt="">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+          <section class="main-section">
+
+    <h1> Contact Us</h1>
+
+  <form id="myForm">
+    <div class="name-container">
+    <div class="name">
+      <label for="">First Name *</label>
+      <input type="text" id="firstname">
+      <p class="errors firstname_err"></p>
+    </div>
+    <div class="name">
+      <label for="">Last Name *</label>
+      <input type="text" id="lastname">
+      <p class="errors lastname_err"></p>
+    </div>
+  </div>
+  
+
+  <label for="">Email Address *</label>
+  <input type="text" id="email">
+  <p class="errors email_err"></p>
+
+  <label for="">Message *</label>
+  <textarea id="textarea"></textarea>
+  <p class="errors textarea_error"></p>
+  <input type="submit">
+  </form>
+  </section>
+  <footer>
+    <h2>LEARNEASY</h2>
+      <div class="footer-icon">
+        <ul>
+          <li><a href=""><img src="./assets/icon-facebook.svg" alt=""></a></li>
+          <li><a href=""><img src="./assets/icon-youtube.svg" alt=""></a></li>
+          <li><a href=""><img src="./assets/icon-twitter.svg" alt=""></a></li>
+          <li><a href=""><img src="./assets/icon-pinterest.svg" alt=""></a></li>
+          <li><a href=""><img src="./assets/icon-instagram.svg" alt=""></a></li>
+        </ul>
+      </div>
+      <form action="">
+        <input type="text" placeholder="Suscribe to our newsletter">
+        <button>Suscribe</button>
+      </form> 
+  </footer>
+
+  <div class="success-container">
+    <div class="success-header">
+      <h2>Sent Successfully!</h2>
+    </div>
+    <p>Expect a feedback from us within the next 24hrs!</p>
+  </div>
+  
+    <script>
+        const btn = document.querySelector(".close")
+         const nav = document.querySelector(".header_nav > nav")
+        btn.addEventListener("click", ()=>{
+            if (nav.style.display == "block"){
+                nav.style.display = "none";
+                btn.setAttribute("src", "./assets/icon-menu.svg")
+            }else {
+                nav.style.display = "block";
+                btn.setAttribute("src", "./assets/icon-close.svg")
+            }
+        })
+    </script>
+
+  <script src="./js/contact.js"></script>
+</body>
+</html>
